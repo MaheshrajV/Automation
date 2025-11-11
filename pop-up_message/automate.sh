@@ -2,7 +2,7 @@
 
 # Ensure environment for GUI notification
 export DISPLAY=:0
-export XAUTHORITY=/home/mahesh/.Xauthority
+export XAUTHORITY=/home/maheshraj/.Xauthority
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
 # Check if user is logged in (GUI session)
