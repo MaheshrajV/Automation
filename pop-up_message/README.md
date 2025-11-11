@@ -39,13 +39,13 @@ grep CRON /var/log/syslog | tail -10
 
 🧠 Understanding Key Variables
 Variable	                                                                 Purpose
-DISPLAY=:0	                          Tells the script which X display (desktop session) to use for GUI apps. Usually :0 for the first user.
-XAUTHORITY=/home/mahesh/.Xauthority	  Grants access to the running X session for notify-send.
-DBUS_SESSION_BUS_ADDRESS	            Connects to your desktop’s notification system.
-loginctl list-sessions	              Lists all active user sessions; used to confirm that a GUI user is logged in.
-timedatectl show -p Timezone --value	Extracts system timezone.
-date '+%Y-%m-%d %H:%M:%S'	            Prints formatted local date and time.
-notify-send	                          Sends a notification to the desktop.
+DISPLAY=:0 - Tells the script which X display (desktop session) to use for GUI apps. Usually :0 for the first user.
+XAUTHORITY=/home/mahesh/.Xauthority - Grants access to the running X session for notify-send.
+DBUS_SESSION_BUS_ADDRESS - Connects to your desktop’s notification system.
+loginctl list-sessions - Lists all active user sessions; used to confirm that a GUI user is logged in.
+timedatectl show -p Timezone --value - Extracts system timezone.
+date '+%Y-%m-%d %H:%M:%S' - Prints formatted local date and time.
+notify-send - Sends a notification to the desktop.
 
 🔍 Troubleshooting
 Issue	Possible Cause	Fix
