@@ -4,6 +4,7 @@ This Bash script automates a daily popup notification showing the current local 
 when a GUI user session is active.
 
 ⚙️ Features
+
 Detects whether the current user is logged in to a GUI session.
 Displays a desktop notification using notify-send.
 Shows the local timezone and time (using timedatectl and date).
@@ -11,6 +12,7 @@ Compatible with GNOME, KDE, and other Linux desktop environments.
 Can be automated through crontab or systemd.
 
 🪜 Setup Steps
+
 1. Save the Script
 Save the above code as:
 /home/mahesh/Documents/automate.sh
@@ -38,6 +40,7 @@ Check logs (to confirm cron is executing):
 grep CRON /var/log/syslog | tail -10
 
 🧠 Understanding Key Variables
+
 Variable	                                                                 Purpose
 DISPLAY=:0 - Tells the script which X display (desktop session) to use for GUI apps. Usually :0 for the first user.
 XAUTHORITY=/home/mahesh/.Xauthority - Grants access to the running X session for notify-send.
@@ -48,6 +51,7 @@ date '+%Y-%m-%d %H:%M:%S' - Prints formatted local date and time.
 notify-send - Sends a notification to the desktop.
 
 🔍 Troubleshooting
+
 Issue	Possible Cause	Fix
 No popup appears when run by cron	Missing GUI environment variables	Ensure DISPLAY, XAUTHORITY, and DBUS_SESSION_BUS_ADDRESS are correct. 
 Run echo $DISPLAY and echo $DBUS_SESSION_BUS_ADDRESS inside your desktop terminal to confirm.
